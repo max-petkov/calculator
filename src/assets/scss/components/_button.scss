@@ -1,0 +1,30 @@
+.btn {
+  display: inline-block;
+  padding: 15px 24px;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+
+  &--primary {
+    color: #fff;
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+  }
+
+  &-sm {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 8px;
+
+    &--ghost {
+      border-color: #d4d4d4;
+      color: var(--color-neutral-dark);
+    }
+  }
+}

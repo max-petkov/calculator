@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>FAT Calculator</title>
+</head>
+
+<body>
+    <section>
+        <h2>Step 1 - Calculator</h2>
+
+        <div class="steps-calculator">
+            <div class="step step--active">
+                <div class="circle-number">1</div>
+                <p>Shipping details</p>
+            </div>
+            <div class="step">
+                <div class="circle-number circle-number--2">2</div>
+                <p>Vehicle details</p>
+            </div>
+            <div class="step">
+                <div class="circle-number">3</div>
+                <p>Contact info</p>
+            </div>
+        </div>
+
+        <div class="calculator">
+            <div class="calculator__header">
+                <h5>Get a car shipping quote in just 30 seconds or call us at <a href="tel:(888) 509-1102">(888)
+                        509-1102</a></h5>
+                <button class="btn btn-sm btn-sm--ghost">International shippment</button>
+            </div>
+            <div class="calculator__body">
+                <form action="#">
+                    <div class="input-group">
+                        <label for="pickup-location" class="text-caption-m">Pickup location</label>
+                        <input type="text" id="pickup-location" name="pickup-location" placeholder="Zip or City">
+                    </div>
+                    <div class="input-group">
+                        <label for="delivery-location" class="text-caption-m">Delivery location</label>
+                        <input type="text" id="delivery-location" name="delivery-location" placeholder="Zip or City">
+                    </div>
+                    <div class="input-group select--arrow">
+                        <label for="vehicle-type" class="text-caption-m">Vehicle type</label>
+                        <select name="vehicle-type" id="vehicle-type">
+                            <option selected>Please select</option>
+                            <option value="option-one">Option 1</option>
+                            <option value="option-two">Option 2</option>
+                            <option value="option-three">Option 3</option>
+                            <option value="option-four">Option 4</option>
+                            <option value="option-five">Option 5</option>
+                            <option value="option-six">Option 6</option>
+                            <option value="option-seven">Option 7</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Continue</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

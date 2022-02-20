@@ -1,0 +1,58 @@
+form {
+  input {
+    min-width: 240px;
+    border: 1px solid #d4d4d4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-indent: 16px;
+    padding: 15px 0;
+    outline: none;
+
+    &:focus {
+      border-color: rgba(#2b71f0, 0.5);
+      box-shadow: 0 0 0 0.25rem rgba(#2b71f0, 0.25);
+    }
+
+    &::placeholder {
+      color: var(--color-neutral-dark);
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  select {
+    min-width: 240px;
+    border: 1px solid #d4d4d4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 15px 0;
+    outline: none;
+    color: var(--color-neutral-dark);
+    text-indent: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    appearance: none;
+
+    &:focus {
+      border-color: rgba(#2b71f0, 0.5);
+      box-shadow: 0 0 0 0.25rem rgba(#2b71f0, 0.25);
+    }
+  }
+
+  .select--arrow {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../svg/select-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 16px;
+      top: 53%;
+      left: 207px;
+      pointer-events: none;
+    }
+  }
+}
