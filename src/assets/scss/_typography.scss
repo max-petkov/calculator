@@ -3,7 +3,7 @@ h2 {
   font-size: 48px;
   line-height: 56px;
   letter-spacing: -0.03em;
-  color: var(--color-primary);
+  color: $color-primary;
 }
 
 h5 {
@@ -22,7 +22,7 @@ p {
 a {
   display: inline-block;
   text-decoration: none;
-  color: var(--color-primary);
+  color: $color-primary;
 }
 
 .text-caption-m {

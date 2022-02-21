@@ -13,8 +13,9 @@
 
   &--primary {
     color: #fff;
-    border-color: var(--color-primary);
-    background-color: var(--color-primary);
+    border-color: $color-primary;
+    background-color: $color-primary;
+    box-shadow: 0 8px 28px rgba($color-primary, 0.5);
   }
 
   &-sm {

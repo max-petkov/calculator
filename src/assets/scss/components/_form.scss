@@ -14,7 +14,7 @@ form {
     }
 
     &::placeholder {
-      color: var(--color-neutral-dark);
+      color: $color-neutral-dark;
       font-size: 16px;
       line-height: 16px;
     }
@@ -27,15 +27,15 @@ form {
     border-radius: 4px;
     padding: 15px 0;
     outline: none;
-    color: var(--color-neutral-dark);
+    color: $color-neutral-dark;
     text-indent: 16px;
     font-size: 16px;
     line-height: 16px;
     appearance: none;
 
     &:focus {
-      border-color: rgba(#2b71f0, 0.5);
-      box-shadow: 0 0 0 0.25rem rgba(#2b71f0, 0.25);
+      border-color: rgba($color-primary, 0.5);
+      box-shadow: 0 0 0 0.25rem rgba($color-primary, 0.25);
     }
   }
 
