@@ -1,6 +1,8 @@
 .calculator {
   padding: 40px;
   border: none;
+  max-width: 1128px;
+  width: 100%;
   border-radius: 24px;
   background-color: $color-white;
   @include elevation-6;
@@ -8,9 +10,11 @@
   &__header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 28px;
-    h5 {
-      margin-right: 40px;
+
+    button {
+      margin-left: 16px;
     }
   }
 
@@ -32,6 +36,17 @@
         text-align: left;
         align-self: end;
       }
+    }
+  }
+
+  .form--vehicle-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .run-and-drive {
+      position: absolute;
+      top: 110%;
+      right: 0;
     }
   }
 }
@@ -90,12 +105,54 @@
           width: 152px;
         }
       }
+
+      &--3 {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -170px;
+          background-image: url("../svg/dashed-line.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 100%;
+          max-width: 152px;
+          width: 152px;
+        }
+      }
     }
 
     &--active {
       .circle-number {
         color: $color-white;
         background-color: $color-info;
+      }
+      p {
+        color: $color-neutral-dark;
+      }
+    }
+
+    &--ready {
+      .circle-number {
+        border: 1px solid $color-info;
+        background-color: $color-pale;
+        color: $color-pale;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: url("../svg/checkmark-icon.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 16px 24px;
+          width: 100%;
+          height: 100%;
+        }
       }
       p {
         color: $color-neutral-dark;

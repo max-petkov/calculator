@@ -12,15 +12,20 @@ body {
 }
 
 section {
-  min-height: 70vh;
+  min-height: 80vh;
   width: 100%;
   background-color: $color-lighter;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 4px solid #fff;
 
   h2 {
     margin-bottom: 40px;
   }
+}
+
+span {
+  display: inline-block;
 }

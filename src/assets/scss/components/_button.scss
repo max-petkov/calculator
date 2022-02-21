@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
   padding: 15px 24px;
-  height: 100%;
+  height: auto;
   border: 1px solid transparent;
   border-radius: 6px;
   background-color: transparent;
@@ -9,7 +9,27 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
+  white-space: nowrap;
   cursor: pointer;
+
+  &-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &--right {
+      img {
+        margin-left: 8px;
+      }
+    }
+
+    &--left {
+      img {
+        margin-right: 8px;
+      }
+    }
+  }
 
   &--primary {
     color: #fff;
@@ -25,7 +45,12 @@
 
     &--ghost {
       border-color: #d4d4d4;
-      color: var(--color-neutral-dark);
+      color: $color-neutral-dark;
+
+      &-outline {
+        color: $color-neutral-dark;
+        padding: 12px 8px;
+      }
     }
   }
 }
