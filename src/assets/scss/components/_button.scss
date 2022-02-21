@@ -53,4 +53,32 @@
       }
     }
   }
+
+  &-quote {
+    width: 100%;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 12px 0;
+    border-radius: 4px;
+
+    &--primary {
+      color: $color-white;
+      background-color: $color-primary;
+
+      &-inverted {
+        color: $color-primary;
+        background-color: $color-primary-light;
+      }
+    }
+
+    &--info {
+      color: $color-white;
+      background-color: $color-info;
+
+      &-inverted {
+        color: $color-info;
+        background-color: $color-info-light;
+      }
+    }
+  }
 }

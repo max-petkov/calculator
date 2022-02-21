@@ -6,6 +6,19 @@ h2 {
   color: $color-primary;
 }
 
+h3 {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
 h5 {
   font-weight: bold;
   font-size: 24px;
@@ -23,21 +36,4 @@ a {
   display: inline-block;
   text-decoration: none;
   color: $color-primary;
-}
-
-.text-caption-m {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.text-input-m {
-  font-size: 16px;
-  line-height: 16px;
-}
-
-.text-content-sm {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 21px;
 }
