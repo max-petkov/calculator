@@ -28,4 +28,21 @@
       height: 20px;
     }
   }
+
+  &--info {
+    position: relative;
+    background-color: $color-primary-light;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      background-image: url("../svg/info-icon.svg");
+      background-repeat: no-repeat;
+      background-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
 }

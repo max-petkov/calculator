@@ -346,10 +346,10 @@
         </div>
     </section>
     <section>
-        <div class="pickup-details">
+        <div class="pickup-delivery-details">
             <h3>Pickup details</h3>
-            <div class="pickup-details__container mt-16">
-                <form action="#" class="pickup-details__form">
+            <div class="pickup-delivery-details__container mt-16">
+                <form action="#">
                     <div class="form-container">
                         <div class="input-group">
                             <label for="email-pickup" class="text-caption-m">Email</label>
@@ -495,6 +495,253 @@
                             <h6 class="color-primary">$0</h6>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="pickup-delivery-details">
+            <h3>Delivery details</h3>
+            <div class="pickup-delivery-details__container mt-16">
+                <form action="#">
+                    <div class="form-container">
+                        <p class="color-neutral-dark">DELIVERY contact</p>
+                        <div class="radio-container mt-16 ml-2">
+                            <input type="radio" name="delivery-contact" id="delivery-contact-me" value="contact-me">
+                            <label for="delivery-contact-me" class="radio-label text-content-sm">Contact me</label>
+                        </div>
+                        <div class="radio-container mt-8 ml-2">
+                            <input type="radio" name="delivery-contact" id="delivery-contact-someone-else"
+                                value="contact-someone-else">
+                            <label for="delivery-contact-someone-else" class="radio-label text-content-sm">Contact
+                                someone
+                                else</label>
+                        </div>
+                        <div class="input-group mt-16">
+                            <label for="delivery-full-name" class="text-caption-m">Full name</label>
+                            <input type="text" id="delivery-full-name" name="delivery-full-name"
+                                placeholder="e.g. John Smith" value="John Smith">
+                        </div>
+                        <div class="input-group mt-16">
+                            <label for="delivery-phone" class="text-caption-m">Phone number</label>
+                            <input type="text" id="delivery-phone" name="delivery-phone" placeholder="(XXX) XXX - XXXX"
+                                value="(555) 123-4567">
+                        </div>
+                        <button class="btn btn-xsm btn-xsm--ghost-outline btn-icon btn-icon--left w-max-content"> <img
+                                src="./assets/svg/plus-icon.svg" alt="plus-icon">
+                            Alternative number</button>
+                        <div class="separator mt-16"></div>
+                        <button class="btn btn-xsm btn-xsm--ghost-outline btn-icon btn-icon--left w-max-content mt-16">
+                            <img src="./assets/svg/plus-icon.svg" alt="plus-icon">
+                            Additional contact</button>
+                        <div class="mt-24 delivery-location">
+                            <p class="color-neutral-dark">delivery location</p>
+                            <div class="input-group select--arrow mt-16">
+                                <label for="delivery-location-type" class="text-caption-m">Location type</label>
+                                <select name="delivery-location-type" id="delivery-location-type">
+                                    <option selected>Select</option>
+                                    <option value="option-one">Option 1</option>
+                                    <option value="option-two">Option 2</option>
+                                    <option value="option-three">Option 3</option>
+                                    <option value="option-four">Option 4</option>
+                                    <option value="option-five">Option 5</option>
+                                    <option value="option-six">Option 6</option>
+                                    <option value="option-seven">Option 7</option>
+                                </select>
+                            </div>
+                            <div class="input-group mt-16">
+                                <label for="delivery-address" class="text-caption-m">Pickup address</label>
+                                <input type="text" id="delivery-address" name="delivery-address"
+                                    placeholder="Street, Apt etc.">
+                            </div>
+                            <div class="zip-city-container">
+                                <div class="input-group mt-16">
+                                    <label for="delivery-zip" class="text-caption-m">Zip</label>
+                                    <input type="text" id="delivery-zip" name="delivery-zip" placeholder="Zip"
+                                        value="90001" disabled>
+                                </div>
+                                <div class="input-group mt-16">
+                                    <label for="delivery-city" class="text-caption-m">City</label>
+                                    <input type="text" id="delivery-city" name="delivery-city" placeholder="City"
+                                        value="Los Angeles" disabled>
+                                </div>
+                            </div>
+                            <button class="btn btn-xsm btn-xsm--ghost-outline btn-icon btn-icon--left w-max-content">
+                                <img src="./assets/svg/plus-icon.svg" alt="plus-icon">
+                                Special instructions</button>
+                        </div>
+                        <button class="btn btn--primary mt-24 w-100">Continue</button>
+                    </div>
+                </form>
+                <div class="current-quote-details">
+                    <h6 class="color-darker">Your quote details:</h6>
+                    <div class="detail-container text-content-sm mt-16">
+                        <span class="color-neutral-grey">Ship from</span>
+                        <span class="color-darker">Los Angeles, CA 90001</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Ship to</span>
+                        <span class="color-darker">Atlanta, GA, 30066</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Vehicles</span>
+                        <div class="vehicles">
+                            <span class="color-darker">1970 Chevy Chevelle (Running)
+                            </span>
+                            <span class="color-darker">2016 Ford Mustang (Running)
+                            </span>
+                        </div>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Type of service</span>
+                        <span class="color-darker">Door-to-door</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Transit time</span>
+                        <span class="color-darker">7-9 Included</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Trailer type</span>
+                        <span class="color-darker">Open transport </span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Pickup window</span>
+                        <span class="color-darker">Standard (1-5 days)</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Fisrt available date</span>
+                        <span class="color-darker">DD/MM/YY</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Quote ID</span>
+                        <span class="color-darker">21-40447</span>
+                    </div>
+                    <div class="detail-card">
+                        <div>
+                            <span class="color-neutral-dark">Price option</span>
+                            <span class="color-secondary fw-bold">$4094.50</span>
+                        </div>
+                        <div class="mt-8">
+                            <span class="color-neutral-dark">Insurance, taxes:</span>
+                            <span class="color-neutral-dark fw-bold">Included</span>
+                        </div>
+                        <div class="mt-8">
+                            <span class="color-neutral-dark">You pay now</span>
+                            <h6 class="color-primary">$0</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="confirm-order">
+            <h3>Review and confirm your order</h3>
+            <div class="alert alert--info mt-16">You’re almost done! Simply review your information and place your
+                order.</div>
+            <div class="confirm-order__container mt-40">
+                <div class="review-container">
+                    <div class="review-detail">
+                        <h4 class="color-darker">Service type</h4>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Trailer type:</span>
+                            <span class="color-darker">Open transport (Standard)</span>
+                        </div>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Type of service:</span>
+                            <span class="color-darker">Door-to-door</span>
+                        </div>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Vehicles:</span>
+                            <div class="d-flex flex-column">
+                                <span class="color-darker">1970 Chevy Chevelle (Running)</span>
+                                <span class="color-darker">2016 Ford Mustang (Running)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-detail">
+                        <h4 class="color-darker">Pickup details</h4>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Address:</span>
+                            <span class="color-darker">1234 Fake street Suite 100A Los Angeles, CA, 90001</span>
+                        </div>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Contact:</span>
+                            <div class="d-flex flex-column">
+                                <span class="color-darker">Matt Helders | 888 123 4567</span>
+                                <span class="color-darker">Nick O’ Mailley | 888 507 6734</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-detail">
+                        <h4 class="color-darker">Delivery details</h4>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Address:</span>
+                            <span class="color-darker">1234 Fake street Suite 505 Atlana, GA, 30066</span>
+                        </div>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Contact:</span>
+                            <div class="d-flex flex-column">
+                                <span class="color-darker">Jon Doe | 888 543 2130</span>
+                                <span class="color-darker">Sam Smith | 888 567 1234</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-detail review-detail--quote">
+                        <h4 class="color-darker">Quote details</h4>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Quote ID</span>
+                            <span class="color-darker">21-40447</span>
+                        </div>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Distance</span>
+                            <span class="color-darker">2796mi</span>
+                        </div>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Transit time</span>
+                            <span class="color-darker">7-9 included</span>
+                        </div>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Fisrt available date</span>
+                            <span class="color-darker">DD/MM/YY</span>
+                        </div>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Insurance & taxes</span>
+                            <span class="color-darker">Included</span>
+                        </div>
+                        <div class="detail-container text-content-sm mt-24">
+                            <span class="color-neutral-grey">Subtotal:</span>
+                            <span class="fw-bold color-secondary">$4094.50</span>
+                        </div>
+                        <div class="detail-container text-content-sm">
+                            <span class="color-neutral-grey">Due total:</span>
+                            <span class="color-primary">$00.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-container">
+                    <p class="color-neutral-dark subtitle">Please type your full name</p>
+                    <form action="#" class="mt-24">
+                        <div class="input-group">
+                            <input type="text" id="book-full-name" name="book-full-name" placeholder="Full name">
+                        </div>
+                        <div class="checkbox-container ml-4 mt-16">
+                            <input type="checkbox" name="terms-and-condition" id="terms-and-condition" value="agree">
+                            <label for="terms-and-condition"
+                                class="checkbox-label text-content-sm color-neutral-dark">By checking this box
+                                & signing your name you agree to our <a href="#" class="color-info">terms and
+                                    conditions.</a></label>
+                        </div>
+                        <button type="submit" class="btn btn--primary">Book order</button>
+                    </form>
                 </div>
             </div>
         </div>

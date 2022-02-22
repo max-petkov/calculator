@@ -93,6 +93,10 @@
   margin-left: 12px;
 }
 
+.ml-4 {
+  margin-left: 4px;
+}
+
 .ml-2 {
   margin-left: 2px;
 }
@@ -104,6 +108,10 @@
 // Flex & Grid
 .d-flex {
   display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .a-items-center {
