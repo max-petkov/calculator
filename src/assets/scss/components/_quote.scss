@@ -1,0 +1,167 @@
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1128px;
+
+  .quote-cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &:first-child {
+        margin-right: 24px;
+      }
+
+      h4 {
+        text-align: center;
+      }
+
+      & > div {
+        display: flex;
+      }
+
+      .card {
+        padding: 24px;
+        width: 100%;
+        padding-top: 32px;
+        border-radius: 8px;
+        text-align: center;
+        background-color: $color-white;
+
+        &--most-popular {
+          position: relative;
+
+          &:before {
+            content: "Most popular";
+            position: absolute;
+            top: -11px;
+            left: 30px;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            color: $color-white;
+            background-color: $color-primary;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 24px;
+        }
+
+        &__price {
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+
+  .quote-footer {
+    display: flex;
+
+    .quote-call-option {
+      flex: 1;
+      margin-right: 24px;
+
+      & > div {
+        display: flex;
+        align-items: center;
+
+        span {
+          position: relative;
+          padding: 0 14px;
+          margin-right: 16px;
+
+          &::before {
+            content: ".";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            font-size: 20px;
+          }
+          &::after {
+            content: ".";
+            position: absolute;
+            top: -5px;
+            right: 0;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .form-send-quote-copy {
+        display: flex;
+
+        input {
+          padding: 11px 0;
+          width: 288px;
+          margin-right: 16px;
+          border-color: transparent;
+          border-radius: 4px;
+
+          &::placeholder {
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
+
+        button {
+          width: max-content;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    }
+    .quote-details {
+      flex: 1;
+
+      p {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          max-width: 482px;
+          @include separator;
+        }
+      }
+
+      .details {
+        display: flex;
+
+        &__address {
+          display: grid;
+          grid-template-columns: repeat(3, max-content);
+          column-gap: 24px;
+          margin-right: 24px;
+        }
+
+        .detail-container {
+          display: flex;
+          flex-direction: column;
+          row-gap: 8px;
+        }
+
+        &__vehicles {
+          .vehicles {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+          }
+        }
+      }
+    }
+  }
+}

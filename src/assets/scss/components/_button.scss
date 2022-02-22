@@ -39,9 +39,18 @@
   }
 
   &-sm {
+    padding: 12px 8px;
+    font-weight: bold;
     font-size: 14px;
     line-height: 14px;
-    padding: 8px;
+  }
+
+  &-xsm {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
 
     &--ghost {
       border-color: #d4d4d4;

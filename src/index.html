@@ -37,8 +37,8 @@
             <div class="calculator__header">
                 <h5>Get a car shipping quote in just 30 seconds or call us at <a href="tel:(888) 509-1102">(888)
                         509-1102</a></h5>
-                <button class="btn btn-sm btn-sm--ghost btn-icon btn-icon--left"> <img src="./assets/svg/earth-icon.svg"
-                        alt="earth-icon"> International shippment</button>
+                <button class="btn btn-xsm btn-xsm--ghost btn-icon btn-icon--left"> <img
+                        src="./assets/svg/earth-icon.svg" alt="earth-icon"> International shippment</button>
             </div>
             <div class="calculator__body">
                 <form action="#">
@@ -146,7 +146,7 @@
                     </div>
                     <button type="submit" class="btn btn--primary btn-icon btn-icon--right">Continue <img
                             src="./assets/svg/arrow-icon.svg" alt="arrow-icon"></button>
-                    <button class="btn btn-sm btn-sm--ghost-outline btn-icon btn-icon--left w-max-content"> <img
+                    <button class="btn btn-xsm btn-xsm--ghost-outline btn-icon btn-icon--left w-max-content"> <img
                             src="./assets/svg/plus-icon.svg" alt="plus-icon">
                         Add vehicle</button>
 
@@ -211,68 +211,140 @@
             company</p>
     </section>
     <section>
-        <h3>Your quote is ready!</h3>
-        <p class="color-neutral-darker mt-8">Choose a trailer type to schedule your pickup date.</p>
-        <div class="alert alert--success mt-16">Pay nothing now to schedule your shipment. Just click the button below
-            and
-            follow the simple steps!</div>
-        <div class="quote-cards mt-40">
+        <div class="quote-container">
+            <h3>Your quote is ready!</h3>
+            <p class="color-neutral-dark mt-8">Choose a trailer type to schedule your pickup date.</p>
+            <div class="alert alert--success mt-16">Pay nothing now to schedule your shipment. Just click the button
+                below
+                and
+                follow the simple steps!</div>
+            <div class="quote-cards mt-40">
 
-            <div class="quote-cards__container">
-                <h4 class="color-secondary">Open transport</h4>
-                <div class="mt-16">
-                    <div class="card card--most-popular">
-                        <div class="card__header">
-                            <h3 class="color-primary">Standard</h3>
-                            <p class="mt-8 color-neutral-dark">Open-air transport</p>
-                            <p class="card__price color-primary mt-8">$2631.50</p>
-                        </div>
-                        <div class="card__body mt-48">
-                            <p class="fw-bold color-neutral-grey">Pickup window</p>
-                            <p class="fw-bold color-darker">1-5 days</p>
+                <div class="quote-cards__container">
+                    <h4 class="color-secondary">Open transport</h4>
+                    <div class="mt-16">
+                        <div class="card card--most-popular">
+                            <div class="card__header">
+                                <h3 class="color-primary">Standard</h3>
+                                <p class="mt-8 color-neutral-dark">Open-air transport</p>
+                                <p class="card__price color-primary mt-8">$2631.50</p>
+                            </div>
+                            <div class="card__body mt-48">
+                                <p class="fw-bold color-neutral-grey">Pickup window</p>
+                                <p class="fw-bold color-darker">1-5 days</p>
+                            </div>
                             <button class="btn btn-quote btn-quote--primary mt-8">Select</button>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__header">
-                            <h3 class="color-primary">Expedited</h3>
-                            <p class="mt-8 color-neutral-dark">Open-air transport</p>
-                            <p class="card__price color-primary mt-8">$3274.90</p>
-                        </div>
-                        <div class="card__body mt-48">
-                            <p class="fw-bold color-neutral-grey">Pickup window</p>
-                            <p class="fw-bold color-darker">48 hours</p>
+                        <div class="card">
+                            <div class="card__header">
+                                <h3 class="color-primary">Expedited</h3>
+                                <p class="mt-8 color-neutral-dark">Open-air transport</p>
+                                <p class="card__price color-primary mt-8">$3274.90</p>
+                            </div>
+                            <div class="card__body mt-48">
+                                <p class="fw-bold color-neutral-grey">Pickup window</p>
+                                <p class="fw-bold color-darker">48 hours</p>
+                            </div>
                             <button class="btn btn-quote btn-quote--primary-inverted mt-8">Select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-cards__container">
+                    <h4 class="color-secondary">Enclosed transport</h4>
+                    <div class="mt-16">
+                        <div class="card">
+                            <div class="card__header">
+                                <h3 class="color-info">Standard</h3>
+                                <p class="mt-8 color-neutral-dark">Enclosed transport</p>
+                                <p class="card__price color-info mt-8">$4231.50</p>
+                            </div>
+                            <div class="card__body mt-48">
+                                <p class="fw-bold color-neutral-grey">Pickup window</p>
+                                <p class="fw-bold color-darker">1-5 days</p>
+                            </div>
+                            <button class="btn btn-quote btn-quote--info mt-8">Select</button>
+                        </div>
+                        <div class="card">
+                            <div class="card__header">
+                                <h3 class="color-info">Expedited</h3>
+                                <p class="mt-8 color-neutral-dark">Enclosed transport</p>
+                                <p class="card__price color-info mt-8">$4732.90</p>
+                            </div>
+                            <div class="card__body mt-48">
+                                <p class="fw-bold color-neutral-grey">Pickup window</p>
+                                <p class="fw-bold color-darker">48 hours</p>
+                            </div>
+                            <button class="btn btn-quote btn-quote--info-inverted mt-8">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="quote-cards__container">
-                <h4 class="color-secondary">Enclosed transport</h4>
-                <div class="mt-16">
-                    <div class="card">
-                        <div class="card__header">
-                            <h3 class="color-info">Standard</h3>
-                            <p class="mt-8 color-neutral-dark">Enclosed transport</p>
-                            <p class="card__price color-info mt-8">$4231.50</p>
-                        </div>
-                        <div class="card__body mt-48">
-                            <p class="fw-bold color-neutral-grey">Pickup window</p>
-                            <p class="fw-bold color-darker">1-5 days</p>
-                            <button class="btn btn-quote btn-quote--info mt-8">Select</button>
-                        </div>
+            <div class="quote-footer mt-24">
+                <div class="quote-call-option">
+                    <div>
+                        <span class="subtitle color-neutral-dark">OR</span>
+                        <div class="separator"></div>
                     </div>
-                    <div class="card">
-                        <div class="card__header">
-                            <h3 class="color-info">Expedited</h3>
-                            <p class="mt-8 color-neutral-dark">Enclosed transport</p>
-                            <p class="card__price color-info mt-8">$4732.90</p>
+
+                    <p class="body-leading mt-16">Call <a href="tel:888-509-1102">888-509-1102</a> & our Reservation
+                        Department will assist with booking or
+                        answer any questions.</p>
+
+                    <form action="#" class="form-send-quote-copy mt-32">
+                        <div class="input-container">
+                            <input type="email" name="email" placeholder="Your Email">
                         </div>
-                        <div class="card__body mt-48">
-                            <p class="fw-bold color-neutral-grey">Pickup window</p>
-                            <p class="fw-bold color-darker">48 hours</p>
-                            <button class="btn btn-quote btn-quote--info-inverted mt-8">Select</button>
+                        <button class="btn btn-quote btn-quote--primary-inverted"> <img
+                                src="./assets/svg/envelope-icon.svg" alt="envelope" class="mr-6"> Send Copy</button>
+                    </form>
+                </div>
+
+                <div class="quote-details">
+                    <p class="subtitle color-neutral-dark">Details</p>
+                    <div class="details mt-16">
+                        <div class="details__address">
+                            <div class="detail-container text-content-sm">
+                                <span class="color-neutral-grey">Distance</span>
+                                <span class="color-darker">2796mi</span>
+                                <span class="separator"></span>
+                            </div>
+                            <div class="detail-container text-content-sm">
+                                <span class="color-neutral-grey">Service type</span>
+                                <span class="color-darker">Door-to-door</span>
+                                <span class="separator"></span>
+                            </div>
+                            <div class="detail-container text-content-sm">
+                                <span class="color-neutral-grey">Ship from</span>
+                                <span class="color-darker">Los Angeles, CA 90001</span>
+                                <span class="separator"></span>
+                            </div>
+                            <div class="detail-container text-content-sm">
+                                <span class="color-neutral-grey">Transit time</span>
+                                <span class="color-darker">7-9 Included</span>
+                                <span class="separator"></span>
+                            </div>
+                            <div class="detail-container text-content-sm">
+                                <span class="color-neutral-grey">Insurance</span>
+                                <span class="color-darker">Included</span>
+                                <span class="separator"></span>
+                            </div>
+                            <div class="detail-container text-content-sm">
+                                <span class="color-neutral-grey">Ship to</span>
+                                <span class="color-darker">Atlanta, GA, 30066</span>
+                                <span class="separator"></span>
+                            </div>
+                        </div>
+                        <div class="details__vehicles">
+                            <div class="detail-container text-content-sm">
+                                <span class="color-neutral-grey">Vehicles</span>
+                                <div class="vehicles">
+                                    <span class="color-darker">1970 Chevy Chevelle</span>
+                                    <span class="color-darker">2016 Ford Mustang</span>
+                                </div>
+                                <span class="separator"></span>
+                            </div>
                         </div>
                     </div>
                 </div>

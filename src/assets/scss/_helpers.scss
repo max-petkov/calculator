@@ -20,6 +20,20 @@
   line-height: 21px;
 }
 
+.body-leading {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.0015em;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.0015em;
+}
+
 // Colors
 .color-primary {
   color: $color-primary;
@@ -59,6 +73,10 @@
   margin-top: 40px;
 }
 
+.mt-32 {
+  margin-top: 32px;
+}
+
 .mt-24 {
   margin-top: 24px;
 }
@@ -73,6 +91,10 @@
 
 .ml-12 {
   margin-left: 12px;
+}
+
+.mr-6 {
+  margin-right: 6px;
 }
 
 // Flex & Grid
@@ -96,4 +118,9 @@
 // Sizing
 .w-max-content {
   width: max-content !important;
+}
+
+// UI Elements
+.separator {
+  @include separator;
 }
