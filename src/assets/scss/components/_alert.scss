@@ -12,6 +12,14 @@
   color: $color-black;
   background-color: transparent;
 
+  @include responsive($tablet) {
+    & {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
   &--success {
     position: relative;
     background-color: $color-success-light;

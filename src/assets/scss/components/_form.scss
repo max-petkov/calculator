@@ -118,13 +118,13 @@ form {
     &:checked ~ .checkbox-label::after {
       content: "";
       position: absolute;
-      top: 60%;
+      top: 50%;
       left: -8px;
       background-image: url("../svg/checkbox-icon.svg");
       background-repeat: no-repeat;
       background-size: 12px;
       width: 12px;
-      height: 12px;
+      height: 8px;
       background-color: $color-primary;
       transform: translate(-50%, -50%);
       overflow: hidden;
