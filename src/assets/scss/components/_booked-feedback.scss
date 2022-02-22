@@ -1,36 +1,52 @@
 .booked-feedback {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 552px;
+  &__container {
+    max-width: 552px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  &__card {
-    padding: 32px;
-    padding-top: 40px;
-    margin-top: 24px;
-    border-radius: 8px;
-    background-color: $color-white;
-
-    &-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      img {
-        margin-bottom: 24px;
-      }
-
-      & > p {
-        margin-bottom: 4px;
-      }
-    }
-
-    &-body {
+    .booked-feedback__card {
+      padding: 32px;
+      padding-top: 40px;
       margin-top: 24px;
-    }
-  }
+      border-radius: 8px;
+      background-color: $color-white;
 
-  .btn {
-    margin-top: 32px;
+      @include responsive($mobile) {
+        & {
+          padding: 20px;
+          padding-top: 32px;
+        }
+      }
+
+      &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          margin-bottom: 24px;
+        }
+
+        & > p {
+          margin-bottom: 4px;
+        }
+      }
+
+      &-body {
+        margin-top: 24px;
+      }
+    }
+
+    .btn {
+      margin-top: 32px;
+
+      @include responsive($mobile) {
+        & {
+          margin-top: 24px;
+        }
+      }
+    }
   }
 }
