@@ -16,8 +16,6 @@
 
 <body>
     <section>
-        <h2>Step 1 - Calculator</h2>
-
         <div class="steps-calculator">
             <div class="step step--active">
                 <div class="circle-number">1</div>
@@ -71,8 +69,6 @@
 
     </section>
     <section>
-        <h2>Step 2 - Calculator</h2>
-
         <div class="steps-calculator">
             <div class="step step--ready">
                 <div class="circle-number">1</div>
@@ -156,8 +152,6 @@
 
     </section>
     <section>
-        <h2>Step 3 - Calculator</h2>
-
         <div class="steps-calculator">
             <div class="step step--ready">
                 <div class="circle-number">1</div>
@@ -345,6 +339,160 @@
                                 </div>
                                 <span class="separator"></span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="pickup-details">
+            <h3>Pickup details</h3>
+            <div class="pickup-details__container mt-16">
+                <form action="#" class="pickup-details__form">
+                    <div class="form-container">
+                        <div class="input-group">
+                            <label for="email-pickup" class="text-caption-m">Email</label>
+                            <input type="email" id="email-pickup" name="email-pickup" placeholder="Your Email">
+                        </div>
+                        <div class="input-group select--arrow mt-16">
+                            <label for="pickup-date" class="text-caption-m">First available date</label>
+                            <select name="pickup-date" id="pickup-date">
+                                <option selected>Select pickup date</option>
+                                <option value="option-one">Option 1</option>
+                                <option value="option-two">Option 2</option>
+                                <option value="option-three">Option 3</option>
+                                <option value="option-four">Option 4</option>
+                                <option value="option-five">Option 5</option>
+                                <option value="option-six">Option 6</option>
+                                <option value="option-seven">Option 7</option>
+                            </select>
+                        </div>
+                        <p class="color-neutral-dark mt-32">Pickup contact</p>
+                        <div class="radio-container mt-16 ml-2">
+                            <input type="radio" name="pickup-contact" id="pickup-contact-me" value="contact-me">
+                            <label for="pickup-contact-me" class="radio-label text-content-sm">Contact me</label>
+                        </div>
+                        <div class="radio-container mt-8 ml-2">
+                            <input type="radio" name="pickup-contact" id="pickup-contact-someone-else"
+                                value="contact-someone-else">
+                            <label for="pickup-contact-someone-else" class="radio-label text-content-sm">Contact someone
+                                else</label>
+                        </div>
+                        <div class="input-group mt-16">
+                            <label for="pickup-full-name" class="text-caption-m">Full name</label>
+                            <input type="text" id="pickup-full-name" name="pickup-full-name"
+                                placeholder="e.g. John Smith" value="John Smith">
+                        </div>
+                        <div class="input-group mt-16">
+                            <label for="pickup-phone" class="text-caption-m">Phone number</label>
+                            <input type="text" id="pickup-phone" name="pickup-phone" placeholder="(XXX) XXX - XXXX"
+                                value="(555) 123-4567">
+                        </div>
+                        <button class="btn btn-xsm btn-xsm--ghost-outline btn-icon btn-icon--left w-max-content"> <img
+                                src="./assets/svg/plus-icon.svg" alt="plus-icon">
+                            Alternative number</button>
+                        <div class="separator mt-16"></div>
+                        <button class="btn btn-xsm btn-xsm--ghost-outline btn-icon btn-icon--left w-max-content mt-16">
+                            <img src="./assets/svg/plus-icon.svg" alt="plus-icon">
+                            Additional contact</button>
+                        <div class="mt-24 pickup-location">
+                            <p class="color-neutral-dark">Pickup location</p>
+                            <div class="input-group select--arrow mt-16">
+                                <label for="pickup-location-type" class="text-caption-m">Location type</label>
+                                <select name="pickup-location-type" id="pickup-location-type">
+                                    <option selected>Select</option>
+                                    <option value="option-one">Option 1</option>
+                                    <option value="option-two">Option 2</option>
+                                    <option value="option-three">Option 3</option>
+                                    <option value="option-four">Option 4</option>
+                                    <option value="option-five">Option 5</option>
+                                    <option value="option-six">Option 6</option>
+                                    <option value="option-seven">Option 7</option>
+                                </select>
+                            </div>
+                            <div class="input-group mt-16">
+                                <label for="pickup-address" class="text-caption-m">Pickup address</label>
+                                <input type="text" id="pickup-address" name="pickup-address"
+                                    placeholder="Street, Apt etc.">
+                            </div>
+                            <div class="zip-city-container">
+                                <div class="input-group mt-16">
+                                    <label for="pickup-zip" class="text-caption-m">Zip</label>
+                                    <input type="text" id="pickup-zip" name="pickup-zip" placeholder="Zip" value="90001"
+                                        disabled>
+                                </div>
+                                <div class="input-group mt-16">
+                                    <label for="pickup-city" class="text-caption-m">City</label>
+                                    <input type="text" id="pickup-city" name="pickup-city" placeholder="City"
+                                        value="Los Angeles" disabled>
+                                </div>
+                            </div>
+                            <button class="btn btn-xsm btn-xsm--ghost-outline btn-icon btn-icon--left w-max-content">
+                                <img src="./assets/svg/plus-icon.svg" alt="plus-icon">
+                                Special instructions</button>
+                        </div>
+                        <button class="btn btn--primary mt-24 w-100">Continue</button>
+                    </div>
+                </form>
+                <div class="current-quote-details">
+                    <h6 class="color-darker">Your quote details:</h6>
+                    <div class="detail-container text-content-sm mt-16">
+                        <span class="color-neutral-grey">Ship from</span>
+                        <span class="color-darker">Los Angeles, CA 90001</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Ship to</span>
+                        <span class="color-darker">Atlanta, GA, 30066</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Vehicles</span>
+                        <div class="vehicles">
+                            <span class="color-darker">1970 Chevy Chevelle (Running)
+                            </span>
+                            <span class="color-darker">2016 Ford Mustang (Running)
+                            </span>
+                        </div>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Type of service</span>
+                        <span class="color-darker">Door-to-door</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Transit time</span>
+                        <span class="color-darker">7-9 Included</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Trailer type</span>
+                        <span class="color-darker">Open transport </span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Pickup window</span>
+                        <span class="color-darker">Standard (1-5 days)</span>
+                        <span class="separator"></span>
+                    </div>
+                    <div class="detail-container text-content-sm">
+                        <span class="color-neutral-grey">Quote ID</span>
+                        <span class="color-darker">21-40447</span>
+                    </div>
+                    <div class="detail-card">
+                        <div>
+                            <span class="color-neutral-dark">Price option</span>
+                            <span class="color-secondary fw-bold">$4094.50</span>
+                        </div>
+                        <div class="mt-8">
+                            <span class="color-neutral-dark">Insurance, taxes:</span>
+                            <span class="color-neutral-dark fw-bold">Included</span>
+                        </div>
+                        <div class="mt-8">
+                            <span class="color-neutral-dark">You pay now</span>
+                            <h6 class="color-primary">$0</h6>
                         </div>
                     </div>
                 </div>

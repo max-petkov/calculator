@@ -1,0 +1,33 @@
+.current-quote-details {
+  min-width: 264px;
+
+  .detail-container {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    span:nth-child(2) {
+      margin-bottom: 16px;
+    }
+
+    .vehicles {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .detail-card {
+    padding: 16px;
+    background-color: $color-white;
+    border-radius: 8px;
+    font-weight: 500;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

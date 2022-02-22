@@ -1,0 +1,50 @@
+.pickup-details {
+  &__container {
+    display: flex;
+
+    form {
+      background-color: $color-white;
+      border-radius: 15px;
+      padding: 24px;
+      padding-top: 40px;
+      min-width: 648px;
+      margin-right: 32px;
+      @include elevation-6;
+
+      .form-container {
+        max-width: 336px;
+
+        p {
+          text-transform: uppercase;
+        }
+
+        .input-group {
+          display: flex;
+          flex-direction: column;
+          row-gap: 4px;
+        }
+
+        .select--arrow::before {
+          left: 89%;
+        }
+
+        .zip-city-container {
+          display: flex;
+
+          input {
+            min-width: auto;
+            width: 100%;
+          }
+          .input-group {
+            width: 100%;
+
+            &:first-child {
+              margin-right: 16px;
+              max-width: 118px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
