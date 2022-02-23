@@ -1,166 +1,332 @@
-.quote-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1128px;
-  margin: 0 auto;
-
-  .quote-cards {
-    width: 100%;
+.quote {
+  &__container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1128px;
+    margin: 0 auto;
 
-    &__container {
-      display: flex;
-      flex-direction: column;
+    .quote-cards {
       width: 100%;
+      display: flex;
+      justify-content: center;
 
-      &:first-child {
-        margin-right: 24px;
-      }
-
-      h4 {
-        text-align: center;
-      }
-
-      & > div {
-        display: flex;
-      }
-
-      .card {
-        padding: 24px;
-        width: 100%;
-        padding-top: 32px;
-        border-radius: 8px;
-        text-align: center;
-        background-color: $color-white;
-
-        &--most-popular {
-          position: relative;
-
-          &:before {
-            content: "Most popular";
-            position: absolute;
-            top: -11px;
-            left: 30px;
-            padding: 5px 10px;
-            border-radius: 12px;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 14px;
-            color: $color-white;
-            background-color: $color-primary;
-          }
-        }
-
-        &:not(:last-child) {
-          margin-right: 24px;
-        }
-
-        &__price {
-          font-weight: normal;
-          font-size: 24px;
-          line-height: 32px;
-        }
-      }
-    }
-  }
-
-  .quote-footer {
-    display: flex;
-
-    .quote-call-option {
-      flex: 1;
-      margin-right: 24px;
-
-      & > div {
-        display: flex;
-        align-items: center;
-
-        span {
-          position: relative;
-          padding: 0 14px;
-          margin-right: 16px;
-
-          &::before {
-            content: ".";
-            position: absolute;
-            top: -5px;
-            left: 0;
-            font-size: 20px;
-          }
-          &::after {
-            content: ".";
-            position: absolute;
-            top: -5px;
-            right: 0;
-            font-size: 20px;
-          }
-        }
-      }
-
-      .form-send-quote-copy {
-        display: flex;
-
-        input {
-          padding: 11px 0;
-          width: 288px;
-          margin-right: 16px;
-          border-color: transparent;
-          border-radius: 4px;
-
-          &::placeholder {
-            font-size: 14px;
-            line-height: 14px;
-          }
-        }
-
-        button {
-          width: max-content;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-      }
-    }
-    .quote-details {
-      flex: 1;
-
-      p {
-        position: relative;
-
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-          max-width: 482px;
-          @include separator;
-        }
-      }
-
-      .details {
-        display: flex;
-
-        &__address {
-          display: grid;
-          grid-template-columns: repeat(3, max-content);
-          column-gap: 24px;
-          row-gap: 8px;
-          margin-right: 24px;
-        }
-
-        .detail-container {
-          display: flex;
+      @include responsive($laptop) {
+        & {
           flex-direction: column;
-          row-gap: 8px;
+        }
+      }
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include responsive($laptop) {
+          &:last-child {
+            margin-top: 32px;
+          }
         }
 
-        &__vehicles {
-          .vehicles {
+        &:first-child {
+          margin-right: 24px;
+
+          @include responsive($tablet) {
+            margin-right: 0;
+          }
+        }
+
+        h4 {
+          text-align: center;
+        }
+
+        & > div {
+          display: flex;
+
+          @include responsive($tablet) {
+            & {
+              flex-direction: column;
+            }
+          }
+        }
+
+        .card {
+          padding: 24px;
+          width: 100%;
+          padding-top: 32px;
+          border-radius: 8px;
+          text-align: center;
+          background-color: $color-white;
+
+          &__body {
+            p:first-child {
+              display: none;
+            }
+          }
+
+          @include responsive($tablet) {
+            & {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              padding: 16px;
+
+              .btn {
+                grid-column: 1/ -1;
+              }
+
+              &__header {
+                margin-right: 16px;
+
+                h3 {
+                  font-size: 24px;
+                  line-height: 30px;
+                  letter-spacing: -0.04em;
+                }
+                p:nth-child(2) {
+                  display: none;
+                }
+              }
+              &__body {
+                margin-top: 0;
+
+                p:not(:last-child) {
+                  font-size: 14px;
+                  line-height: 24px;
+                }
+
+                p:first-child {
+                  display: block;
+                }
+
+                @include responsive($mobile) {
+                  & {
+                    justify-self: flex-end;
+                    text-align: start;
+                  }
+                }
+              }
+            }
+
+            &:not(:first-child) {
+              margin-top: 16px;
+            }
+          }
+
+          &--most-popular {
+            position: relative;
+
+            &:before {
+              content: "Most popular";
+              position: absolute;
+              top: -11px;
+              left: 30px;
+              padding: 5px 10px;
+              border-radius: 12px;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 14px;
+              color: $color-white;
+              background-color: $color-primary;
+
+              @include responsive($tablet) {
+                & {
+                  left: unset;
+                  right: 30px;
+                }
+              }
+            }
+          }
+
+          &:not(:last-child) {
+            margin-right: 24px;
+
+            @include responsive($tablet) {
+              & {
+                margin-right: 0;
+              }
+            }
+          }
+
+          &__price {
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+
+    .quote-footer {
+      display: flex;
+
+      @include responsive($tablet) {
+        & {
+          flex-direction: column;
+          margin-top: 40px;
+        }
+      }
+
+      .quote-call-option {
+        flex: 1;
+        margin-right: 24px;
+
+        @include responsive($tablet) {
+          & {
+            margin-right: 0;
+          }
+        }
+
+        & > div {
+          display: flex;
+          align-items: center;
+
+          span {
+            position: relative;
+            padding: 0 14px;
+            margin-right: 16px;
+
+            &::before {
+              content: ".";
+              position: absolute;
+              top: -5px;
+              left: 0;
+              font-size: 20px;
+            }
+            &::after {
+              content: ".";
+              position: absolute;
+              top: -5px;
+              right: 0;
+              font-size: 20px;
+            }
+          }
+        }
+
+        @include responsive($tablet) {
+          p {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+
+        .form-send-quote-copy {
+          display: flex;
+
+          @include responsive($laptop) {
+            & {
+              flex-direction: column;
+            }
+          }
+
+          input {
+            padding: 11px 0;
+            width: 288px;
+            margin-right: 16px;
+            border-color: transparent;
+            border-radius: 4px;
+
+            &::placeholder {
+              font-size: 14px;
+              line-height: 14px;
+            }
+
+            @include responsive($laptop) {
+              & {
+                width: 100%;
+                margin-right: 0;
+              }
+            }
+          }
+
+          button {
+            width: max-content;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            @include responsive($laptop) {
+              & {
+                width: 100%;
+                margin-top: 16px;
+              }
+            }
+          }
+        }
+      }
+      .quote-details {
+        flex: 1;
+
+        @include responsive($tablet) {
+          & {
+            margin-top: 40px;
+          }
+        }
+
+        p {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: calc(100% - 70px) !important;
+            @include separator;
+          }
+        }
+
+        .details {
+          display: flex;
+
+          @include responsive($tablet) {
+            & {
+              flex-direction: column;
+            }
+          }
+
+          &__address {
+            display: grid;
+            grid-template-columns: repeat(3, max-content);
+            column-gap: 24px;
+            row-gap: 8px;
+            margin-right: 24px;
+
+            @include responsive($laptop) {
+              & {
+                grid-template-columns: repeat(2, max-content);
+              }
+            }
+            @include responsive($tablet) {
+              & {
+                column-gap: 16px;
+                grid-template-columns: repeat(2, 1fr);
+                margin-right: 0;
+              }
+            }
+          }
+
+          .detail-container {
             display: flex;
             flex-direction: column;
             row-gap: 8px;
+          }
+
+          &__vehicles {
+            @include responsive($tablet) {
+              & {
+                margin-top: 8px;
+
+                .separator {
+                  width: calc(50% - 8px);
+                }
+              }
+            }
+
+            .vehicles {
+              display: flex;
+              flex-direction: column;
+              row-gap: 8px;
+            }
           }
         }
       }

@@ -1,5 +1,13 @@
 .current-quote-details {
-  min-width: 264px;
+  max-width: 264px;
+  width: 100%;
+
+  @include responsive($tablet) {
+    & {
+      margin-top: 32px;
+      max-width: unset;
+    }
+  }
 
   .detail-container {
     display: flex;
@@ -24,6 +32,12 @@
     background-color: $color-white;
     border-radius: 8px;
     font-weight: 500;
+
+    @include responsive($tablet) {
+      & {
+        max-width: 264px;
+      }
+    }
 
     div {
       display: flex;

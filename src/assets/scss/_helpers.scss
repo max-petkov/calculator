@@ -36,6 +36,12 @@
 
 .text-center {
   text-align: center;
+
+  @include responsive($tablet) {
+    &-sm {
+      text-align: center;
+    }
+  }
 }
 
 // Colors
@@ -138,6 +144,12 @@
 
 .w-100 {
   width: 100%;
+
+  @include responsive($tablet) {
+    &-sm {
+      width: 100%;
+    }
+  }
 }
 
 // UI Elements

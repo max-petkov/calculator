@@ -1,18 +1,44 @@
 .pickup-delivery-details {
+  h3 {
+    max-width: calc(648px + 24px + 264px);
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    @include responsive($tablet) {
+      & {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
   &__container {
     display: flex;
+    justify-content: center;
+
+    @include responsive($tablet) {
+      & {
+        flex-direction: column;
+      }
+    }
 
     form {
       background-color: $color-white;
       border-radius: 15px;
       padding: 24px;
       padding-top: 40px;
-      min-width: 648px;
+      max-width: 648px;
+      width: 100%;
       margin-right: 32px;
       @include elevation-6;
 
       .form-container {
         max-width: 336px;
+
+        @include responsive($tablet) {
+          & {
+            max-width: unset;
+          }
+        }
 
         p {
           text-transform: uppercase;
@@ -24,8 +50,12 @@
           row-gap: 4px;
         }
 
-        .select--arrow::before {
-          left: 89%;
+        @include responsive($tablet) {
+          .btn-add-contact {
+            border-color: $color-neutral-light;
+            width: 100%;
+            justify-content: center;
+          }
         }
 
         .zip-city-container {
