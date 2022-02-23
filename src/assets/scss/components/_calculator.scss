@@ -105,12 +105,79 @@
 
   .form--vehicle-details {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+
+    .vechicles {
+      display: flex;
+      flex-direction: column;
+
+      .vehicle-container {
+        display: flex;
+        column-gap: 24px;
+
+        &--new {
+          margin-top: 64px;
+
+          @include responsive($tablet) {
+            & {
+              position: relative;
+              margin-top: 48px;
+            }
+
+            &::before {
+              content: "";
+              @include separator;
+              position: absolute;
+              top: -20px;
+              left: 0;
+            }
+          }
+        }
+
+        @include responsive($tablet) {
+          & {
+            flex-direction: column;
+          }
+        }
+      }
+    }
 
     .run-and-drive {
       position: absolute;
       top: 110%;
       right: 0;
+    }
+
+    .btn--primary {
+      grid-column: -1;
+      width: 256px;
+
+      @include responsive($laptop) {
+        & {
+          grid-column: unset;
+          // margin-top: 24px;
+        }
+      }
+
+      @include responsive($tablet) {
+        & {
+          width: 100%;
+        }
+      }
+    }
+
+    @include responsive($laptop) {
+      .btn-xsm {
+        grid-row: 2;
+      }
+    }
+
+    @include responsive($tablet) {
+      .btn-xsm {
+        border-color: $color-neutral-light;
+        width: 100% !important;
+        margin: 24px 0;
+      }
     }
   }
 }
