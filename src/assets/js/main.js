@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function testimonialSlider() {
   const testimonialSlider = new Splide("#testimonial", {
     perPage: 3,
     perMove: 1,
@@ -16,4 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   testimonialSlider.mount();
+}
+
+function ourServicesSlider() {
+  const splide = new Splide("#our-services", {
+    perPage: 1,
+    focus: "center",
+    gap: "24px",
+  });
+
+  splide.mount();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  testimonialSlider();
+  ourServicesSlider();
 });

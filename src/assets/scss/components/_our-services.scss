@@ -1,0 +1,45 @@
+.our-services {
+  background-color: #f0efea;
+  min-height: auto;
+  padding: 80px 40px;
+
+  h2 {
+    max-width: 1128px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__container {
+    max-width: 1128px;
+    margin: 0 auto;
+  }
+
+  &__slide {
+    max-width: 320px;
+    width: 100%;
+    border: none;
+
+    .card {
+      transition: 0.3s ease-out;
+
+      &__img {
+        border-radius: 8px 24px 0 0;
+        max-height: 560px;
+        height: 100%;
+      }
+
+      &__title {
+        padding: 24px;
+        padding-top: 40px;
+        min-height: 140px;
+        border-radius: 0 0 8px 24px;
+        background-color: #ffffff;
+      }
+
+      &:hover {
+        transform: scale(1.01);
+        @include elevation-6;
+      }
+    }
+  }
+}
