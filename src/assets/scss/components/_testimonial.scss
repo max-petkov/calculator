@@ -1,0 +1,163 @@
+.testimonial {
+  padding: 120px 40px;
+  background-color: #97dde5;
+  min-height: auto;
+
+  @include responsive($tablet) {
+    & {
+      padding: 80px 40px;
+    }
+  }
+
+  @include responsive($mobile) {
+    & {
+      padding: 40px 16px;
+    }
+  }
+
+  h2 {
+    max-width: 1128px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    z-index: 2;
+  }
+
+  &__container {
+    position: relative;
+    max-width: 1128px;
+    margin: 0 auto;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(100% - 176px + 20px);
+      left: -90px;
+      background-image: url("../svg/dots-color-primary.svg");
+      background-repeat: no-repeat;
+      width: 128px;
+      height: 176px;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -61px;
+      right: -15px;
+      background-image: url("../svg/dots-color-success-light.svg");
+      background-repeat: no-repeat;
+      width: 128px;
+      height: 176px;
+      z-index: -1;
+    }
+  }
+
+  &__arrow {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    transform: rotate(180deg);
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &[disabled] {
+      opacity: 0.3;
+      background-color: #fff;
+
+      svg {
+        fill: #14357a;
+      }
+    }
+    &:not([disabled]) {
+      background-color: #2b71f0;
+      opacity: 1;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    &--prev {
+      left: -80px;
+    }
+
+    &--next {
+      right: -80px;
+    }
+
+    @include responsive(1440.9px) {
+      & {
+        position: unset;
+      }
+    }
+  }
+
+  @include responsive(1440.9px) {
+    &__arrows {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+
+      button:first-child {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  &__slide {
+    padding: 40px 32px;
+    border: none;
+    border-radius: 24px 0 24px 0;
+    background-color: $color-white;
+
+    &-logo {
+      margin-bottom: 24px;
+    }
+
+    &-stars {
+      margin-bottom: 24px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: yellow;
+        height: 24px;
+        width: 50px;
+      }
+
+      img {
+        overflow: hidden;
+      }
+    }
+
+    &-review {
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: #424263;
+    }
+
+    &-author {
+      display: flex;
+      align-items: center;
+      .author-picture {
+        background-color: #c4c4c4;
+        border: none;
+        border-radius: 16px;
+        width: 56px;
+        height: 56px;
+        margin-right: 16px;
+      }
+    }
+  }
+}

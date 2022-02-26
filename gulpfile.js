@@ -33,22 +33,46 @@ gulp.task("css", function () {
     .pipe(gulp.dest(css.dist));
 });
 
+const js = {
+  src: "src/assets/js/main.js",
+  dist: "dist/assets/js/",
+};
+gulp.task("js", function () {
+  return gulp.src(js.src).pipe(uglify()).pipe(gulp.dest(js.dist));
+});
+
 const svg = {
   src: "src/assets/svg/*.svg",
   dist: "dist/assets/svg/",
 };
-
 gulp.task("svg", function () {
   return gulp.src(svg.src).pipe(gulp.dest(svg.dist));
 });
 
-gulp.task("build", gulp.series("html", "css", "svg"));
+const libs = {
+  src: "src/assets/libs/**/*",
+  dist: "dist/assets/libs/",
+};
+gulp.task("libs", function () {
+  return gulp.src(libs.src).pipe(gulp.dest(libs.dist));
+});
+
+const img = {
+  src: "src/assets/img/*",
+  dist: "dist/assets/img/",
+};
+gulp.task("img", function () {
+  return gulp.src(img.src).pipe(imagemin()).pipe(gulp.dest(img.dist));
+});
+
+gulp.task("build", gulp.series("html", "css", "js", "libs", "svg", "img"));
 
 // Creating Watch task + Browserync
 gulp.task("watch", function () {
   browsersync.init({ server: { baseDir: "./dist" } });
   gulp.watch(html.src, gulp.series("html")).on("change", browsersync.reload);
   gulp.watch(css.watch, gulp.series("css")).on("change", browsersync.reload);
+  gulp.watch(js.src, gulp.series("js")).on("change", browsersync.reload);
 });
 
 gulp.task("default", gulp.series("build", "watch"));
