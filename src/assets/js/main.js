@@ -23,6 +23,9 @@ function ourServicesSlider() {
     perPage: 1,
     focus: "center",
     gap: "24px",
+    lazyLoad: "nearby",
+    arrows: false,
+    pagination: false,
   });
 
   splide.mount();
